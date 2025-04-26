@@ -12,6 +12,9 @@ const backendUrl = process.env.VITE_BACKEND_URL;
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   server: {
-    cors: import.meta.VITE_BACKEND_URL
+    cors: {
+      origin: backendUrl
+    }
   }
 })
+
