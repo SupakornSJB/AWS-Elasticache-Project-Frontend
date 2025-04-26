@@ -89,7 +89,7 @@ function App() {
             <legend className="fieldset-legend">Search</legend>
             <div className='flex gap-2'>
               <input type="text" onChange={onQueryStringChange} value={queryString} className='input w-full' />
-              <button onClick={fetchSearch} className='btn btn-primary ' disabled={queryString === ""}>Fetch</button>
+              <button onClick={fetchSearch} className='btn btn-primary ' disabled={queryString === ""}>Search</button>
             </div>
             <p className="label">(Required)</p>
           </fieldset>
