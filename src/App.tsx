@@ -41,12 +41,12 @@ function App() {
     setIsLoading(true);
     setIsError(false);
     const initTime = performance.now();
-    let url = import.meta.env.VITE_BACKEND_URK + '/search/' + queryString;
+    let url = import.meta.env.VITE_BACKEND_URL + '/search/' + queryString;
     if (!isGlobalCache) {
       url += '/' + clientId;
     }
 
-    fetch(url)
+    fetch(url, { method: "GET" })
       .then(data => data.json())
       .then((data) => {
         setShownResult(data);
@@ -66,7 +66,7 @@ function App() {
       url += '/' + clientId;
     }
 
-    fetch(url)
+    fetch(url, { method: "DELETE" })
       .finally(() => {
         setIsLoading(false);
       });
