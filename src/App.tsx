@@ -111,7 +111,7 @@ function App() {
         isError && <h1 className='text-3xl font-bold text-red-500 my-3'>An Error Has Occurred</h1>
       }
       {
-        isCacheFlushed && <h1 className='text-3xl font-bold text-success my-3'>Cached Flushed</h1>
+        isCacheFlushed && <h1 className='text-3xl font-bold text-success my-3'>Cache Flushed</h1>
       }
       {
         shownResult &&
