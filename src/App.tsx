@@ -98,8 +98,7 @@ function App() {
           <legend className="fieldset-legend">Global Cache</legend>
           <label className="label">
             <input type="checkbox" checked={isGlobalCache} className="toggle toggle-secondary" onChange={(event) => setIsGlobalCache(event.target.checked)} />
-            Checking this will affect
-            the cache used by all user
+            <span className="whitespace-normal text-left">Checking this will affect the cache used by all user</span>
           </label>
           <button onClick={flushCache} className='btn btn-dash btn-secondary mt-2'>{isGlobalCache ? "Flush ALL Cache" : "Flush My Cache"}</button>
         </fieldset>
